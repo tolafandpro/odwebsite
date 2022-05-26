@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.83216d16.css",
+    "main.js": "/static/js/main.f9f7d1ea.js",
+    "static/media/Odavid-maker.gif": "/static/media/Odavid-maker.69e94148a797d0b3048e.gif",
+    "static/media/hiDavid.gif": "/static/media/hiDavid.8dbdeed471ea1c12e485.gif",
+    "static/media/tolajogging.gif": "/static/media/tolajogging.6d64710ae176ca3affed.gif",
+    "index.html": "/index.html",
+    "main.83216d16.css.map": "/static/css/main.83216d16.css.map",
+    "main.f9f7d1ea.js.map": "/static/js/main.f9f7d1ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83216d16.css",
+    "static/js/main.f9f7d1ea.js"
+  ]
+}
