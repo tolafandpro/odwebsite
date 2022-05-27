@@ -9,14 +9,15 @@ const Logo = styled.h1`
 display: inline-block;
 color: ${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
 font-family: 'Pacifico',cursive;
-
+text-shadow: rgb(252,246,244) 0px 0px 6px;
 position: fixed;
-left: 50%;
-top: 2rem;
+left: 48%;
+top: 1rem;
 justify-content: center;
 text-align: center;
 cursor: pointer;
 z-index:3;
+padding: 5px;
 &:hover{
     outline: ${props => props.theme.purple};
     box-shadow: 0 0 8px 6px rgba(306,0,306,0.3);

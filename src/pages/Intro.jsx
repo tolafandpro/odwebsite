@@ -130,8 +130,8 @@ const Intro = () => {
             <SubBox>
                 <Text>
                     <h1>Hi,</h1>
-                    <h4>I'm Oyetola david</h4>
-                    <h6>A WebDeveloper, Freelancer, webdesigner and a Gadget addict.</h6>
+                    <h4>I'm Oyetola David</h4>
+                    <h6>A WebDeveloper, Freelancer, webdesigner and a Gadget lover.</h6>
                 </Text>
             </SubBox>
             <SubBox>

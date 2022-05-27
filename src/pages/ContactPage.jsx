@@ -25,9 +25,9 @@ const Main =  styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   border-radius: 9px;
-  padding: 1.5rem;
+  padding: 0.5rem;
   width: 60vw;
-  height: 70vh;
+  height: 65vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
@@ -38,7 +38,7 @@ const Main =  styled.div`
   
   position: absolute;
   left: calc(4rem + 5vw);
-  top: 5rem;
+  top: 7rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 
@@ -139,10 +139,10 @@ cursor: pointer;
     transform: scale(1.1);
 }
 `
-const WhatsappLink = styled(NavLink)`
-color: ${props => props.theme.text};
-text-decoration: none;
-`
+// const WhatsappLink = styled.h3`
+// color: ${props => props.theme.body};
+// text-decoration: none;
+// `
 const Contact = () => {
     return ( 
         <ThemeProvider theme={DarkTheme}>
@@ -217,7 +217,7 @@ const Contact = () => {
                             <ContactInfo icon={<GoMail/>} text="tolafandpro@gmail.com" />
                             <ContactInfo icon={<FaWhatsapp/>} text="Text Me"/>
                             <Whatsapp >
-                                 <WhatsappLink to={{ pathname: `https://wa.me/+2348039662232` }} target="_blank">Click to Text</WhatsappLink>
+                                <a href="https://wa.me/+2348039662232" target="_blank" rel="noreferrer">Click to Text</a>
                             </Whatsapp>                             
                         </div>
                         <div className='right'>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Github, Twitter, Linkedin } from '../pages/AllSvgs'
 import {DarkTheme} from '../pages/Themes'
@@ -41,12 +41,14 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1}}
             whileHover={{scale: 1.2}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://github.com/tolafandpro"}}>
+                {/* <Link style={{color:'inherit'}}  target="_blank" to={{pathname:"github.com/tolafandpro"}}></Link> */}
+                   <a href="https://github.com/tolafandpro" target={"_blank"} rel="noreferrer">
                     <Github 
                             width={25} 
                             height={25}  
                             fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
-                </NavLink>
+                    </a>
+                
             </motion.div>
             <motion.div
             initial={{transform:"scale(0)"}}
@@ -54,19 +56,19 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.2}}
             whileHover={{scale: 1.2}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://twitter.com/Oyetola_David"}}>
+                <a  style={{color:'inherit'}}  target={"_blank"}  href="https://twitter.com/Oyetola_David" rel="noreferrer">
                     <Twitter width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
-                </NavLink>
+                </a>
             </motion.div>
             <motion.div
             initial={{transform:"scale(0)"}}
             animate={{scale:[0,1,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1.4}}
-            whileHover={{scale: 1.2, duration: 1}}
+            whileHover={{scale: [1,1.2], duration: 1}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://www.linkedin.com/in/fadairo-oyetola-david-394851102"}}>
+                <a style={{color:'inherit'}}  target="_blank"   href="https://www.linkedin.com/in/fadairo-oyetola-david-394851102" rel="noreferrer">
                     <Linkedin width={30} height={30} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
-                </NavLink>
+                </a>
             </motion.div>
 
             <Line color={props.theme}
