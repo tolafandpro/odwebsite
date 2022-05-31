@@ -132,7 +132,9 @@ justify-content: center;
 align-items:center;
 z-index:3;
 cursor: pointer;
-color: ${props => props.theme.body}
+color: ${props => props.theme.text};
+text-decoration: none;
+
 
 &:hover{
     background-color: ${props => props.theme.purple};
@@ -217,7 +219,7 @@ const Contact = () => {
                         <h3>You can stop by for a chat, drinks or play videogames</h3>
                             <ContactInfo icon={<GoMail/>} text="tolafandpro@gmail.com" />
                             <ContactInfo icon={<FaWhatsapp/>} text="Text Me"/>
-                            <Whatsapp as="a" href="https://wa.me/+2348039662232" target="_blank" rel="noreferrer">
+                            <Whatsapp  href="https://wa.me/+2348039662232" target="_blank" rel="noreferrer">
                                 Click to Text
                             </Whatsapp>                             
                         </div>
