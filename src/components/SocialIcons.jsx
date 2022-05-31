@@ -18,7 +18,7 @@ z-index:3;
 
 @media (max-width: 50em) {
     left: 1rem;
-    color: ${props => props.click ? props.theme.text : props.theme.body };
+    color: ${props => props.theme.text };
 }
 
 &>*:not(:last-child){
@@ -53,8 +53,8 @@ const SocialIcons = (props) => {
             <motion.div
             initial={{transform:"scale(0)"}}
             animate={{scale:[0,1,1.5,1]}}
-            transition={{type:'spring', duration:1, delay:1.2}}
-            whileHover={{scale: 1.2}}
+            whileHover={{scale: 1.2}} 
+            transition={{type:'spring', duration:1, delay:1}}
             >
                 <a  style={{color:'inherit'}}  target={"_blank"}  href="https://twitter.com/Oyetola_David" rel="noreferrer">
                     <Twitter width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />

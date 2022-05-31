@@ -32,7 +32,7 @@ z-index:1;
     color: ${props => props.theme.body};
     text-shadow: rgb(0 0 0) 0px 0px 4px;
     right: calc(0rem + 0.5vw);
-    top: 53%;
+    top: 50%;
     font-size: 0.8em;
 }
 `
@@ -50,6 +50,7 @@ z-index:1;
     color: ${props => props.theme.body};
     text-shadow: rgb(0 0 0) 0px 0px 4px;
     font-size: 0.8em;
+    top: 48%;
 }
 `
 
@@ -157,14 +158,15 @@ const Main = () => {
     const handleClick = () => setClick(!click);
 
     return ( 
-        <MainContainer >
+        <MainContainer 
+        >
             <DarkDiv click={click}/>
             <Container>
             <LogoComponent theme={click ? 'dark' :'light'}/>
-                <SocialIcons theme={click ? 'dark' : 'light' } />
+                <SocialIcons onClick={()=> handleClick} theme={click ? 'dark' : 'light' } />
                 <Center click={click}>
                     <PowerBtn onClick={()=> handleClick()} width={click ? 40 : 150} height={click ? 60 : 150} fill='currentColor' />
-                    <span>click here</span>
+                    <span>Click the button</span>
                 </Center>
 
                 <CONTACT to="/contact">
@@ -179,6 +181,7 @@ const Main = () => {
                 }}
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
+                exit={{ opacity: 0  }}
                 >
                     Contact
                 </motion.h2>

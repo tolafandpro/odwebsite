@@ -17,7 +17,7 @@ export const Work = [
         description:"A full Ecommerce Store with Dashboard to upload and monitor products in ReactJS with react-router functionalities. Built from scratch.",
         tags:["react","react-router","css"],
         
-        demo:"#",
+        demo:"https://tolafandpro.github.io/pizzaanimation/",
         github:"https://github.com/tolafandpro"
         
     },
@@ -36,7 +36,7 @@ export const Work = [
         description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
         tags:["react","sass"],
         
-        demo:"http://react-job-listing-website.codebucks27.vercel.app/",
+        demo:"https://react-job-listing-website.codebucks27.vercel.app/",
         github:"https://github.com/tolafandpro"
         
     },

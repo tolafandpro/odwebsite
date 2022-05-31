@@ -29,7 +29,7 @@ padding: 5px;
     position: fixed;
     color: ${props => props.theme.text};
     left: 40%;
-    top: 2rem;
+    top: 1rem;
     justify-content: center;
 }
 `

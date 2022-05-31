@@ -24,21 +24,25 @@
       rel="stylesheet"
     />
     <style>
-      #loading {
-        background-color: black;
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .loading {
+        width: 100%;
+        height: calc(100vh - 3px);
+        background: rgb(0, 0, 0);
         color: white;
+        display: flex;
+        overflow: hidden;
+        border: none;
+        outline: none;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        width: 100vw;
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: hidden;
-      }
-      #loading > img {
-        top: 20rem;
-        justify-content: center;
-        align-self: center;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
       }
     </style>
     <!--
@@ -55,7 +59,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <div id="loading">
+      <div class="loading">
         <h2>Loading...</h2>
         <img
           width="400px"

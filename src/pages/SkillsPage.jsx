@@ -55,13 +55,13 @@ justify-content: space-between;
 
 @media (max-width: 50em) {
     width: 50vw;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     top: 5rem;
     margin-bottom: 4rem;
-    position: inherit;
-    line-height: 1;
+    position: relative;
+    line-height: 1.5;
 }
 @media (max-width: 30em) {
     width: 40vw;
@@ -126,7 +126,7 @@ z-index:1;
 `
 
 const BottomBar = styled.div`
-position: absolute;
+position: relative;
 bottom: 1rem;
 left: 0;
 right: 0;

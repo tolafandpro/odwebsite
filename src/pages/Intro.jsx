@@ -11,11 +11,9 @@ left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
 
-
 width: 60vw;
 height: 65vh;
 display: flex;
-
 
 background: linear-gradient(to right, ${props => props.theme.body} 50%,${props => props.theme.text} 50%) bottom,
     linear-gradient(
@@ -73,7 +71,7 @@ display: flex;
 .pic{
     position: absolute;
     bottom: 0.2rem;
-    left: 66%;
+    left: 64%;
     transform: translate(-50%,0%);
     width: 17em;
     height: 98%;
