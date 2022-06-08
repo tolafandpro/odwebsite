@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import Me from '../assets/images/Odavid-maker.gif';
@@ -27,30 +26,36 @@ background: linear-gradient(to right, ${props => props.theme.body} 50%,${props =
 
     z-index:1;
 
-    @media only screen and (max-width: 50em){
-        border-style: solid;
-        border-image: initial;
-        border-top: 2px solid rgb(252, 246, 244);
-        border-bottom: 2px solid rgb(0, 0, 0);
-        linear-graident(
-        border-left: 2px solid${props => props.theme.text} 50%) bottom,
-        border-right: 2px solid${props => props.theme.body} 50% top;
-        background-position: 0px 0px, 100%, 0px;
-        background-repeat: no-repeat;
-        width: 70vw;
-    }
-
 
     @media (max-width: 60em) {
         width: 70vw;
     }
     @media (max-width: 50em) {
-        // width: 50vw;
+        linear-gradient(to right, ${props => props.theme.body} 50%, ${props => props.theme.text} 50%) bottom,
+        linear-gradient(to top, ${props => props.theme.text} 50%, ${props => props.theme.body} 50%) top;
+        width: 65vw;
+        border-top: 2px solid rgb(252, 246, 244);
+        border-bottom: 2px solid rgb(0, 0, 0);
+        borer-left: 2px solid rgb(0, 0, 0);
         background-size: 100% 2px;
         flex-direction: column;
         -webkit-box-pack: justify;
         justify-content: space-between;
     }
+
+    // @media only screen and (max-width: 50em){
+    //     border-style: solid;
+    //     border-top: 2px solid rgb(252, 246, 244);
+    //     border-bottom: 2px solid rgb(0, 0, 0);
+    //     linear-graident(
+    //     to right,
+    //     border-left: 2px solid ${props => props.theme.body} 50%,
+    //     border-right: 2px solid ${props => props.theme.text} 50%) top;
+    //     background-position: 0px 0px, 100%, 0px;
+    //     background-repeat: no-repeat;
+    //     width: 70vw;
+    // }
+
     // @media (max-width: 40em) {
     //     width: 60vw;
     // }
@@ -71,30 +76,30 @@ display: flex;
 .pic{
     position: absolute;
     bottom: 0.2rem;
-    left: 64%;
+    left: 66%;
     transform: translate(-50%,0%);
     width: 17em;
     height: 98%;
 
     @media (max-width: 50em) {
-        width: 50vw;
+        width: 46vw;
         height: 32vh;
-        left: 50%;
+        left: 65%;
         transform: translate(-50%,0%);
     }
-        @media (max-width: 40em) {
-            width: 50vw;
-            height: 32vh;
-            left: 58%;
-            transform: translate(-50%,0%);
-        }
-        @media (max-width: 30em) {
-            width: 50vw;
-            height: 32vh;
-            left: 63%;
-            transform: translate(-50%,0%);
-        }
-}
+//         @media (max-width: 40em) {
+//             width: 30vw;
+//             height: 32vh;
+//             left: 78%;
+//             transform: translate(-50%,0%);
+//         }
+//         @media (max-width: 30em) {
+//             width: 50vw;
+//             height: 32vh;
+//             left: 63%;
+//             transform: translate(-50%,0%);
+//         }
+// }
 `
 
 const Text = styled.div`
@@ -102,7 +107,6 @@ font-size: calc(0.8em + 1.5vw);
 color: ${props => props.theme.body};
 padding: 2rem;
 cursor: pointer;
-
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;

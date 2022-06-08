@@ -136,9 +136,9 @@ const AboutPage = () => {
             <img src={oyetola} alt="tolajogging" />
         </Jogging>    
         <Main>
-        I'm a fullstack software developer. I love to create simple yet beautiful websites with mind blowing experience.
+        I'm a fullstack software developer. I love to create interative, simple and beautiful websites with mind blowing experience.
  <br/>
-I have keen interest in learning, developing good stuff, trying new things and building great projects. In my spare time i love to workout and play video games.
+I have keen interest in learning, trying new things and developing great projects. In my spare time i love to workout and play board/video games.
 <br/>
 Specal thanks goes to Travesy, Ed, Wrong Akan, Web Unlocked, Codebucks and all great youtubers out there. Stay safe and have a wonderful day.
         </Main>

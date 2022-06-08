@@ -23,7 +23,7 @@ align-items: center;
 
 @media (max-width: 50em) {
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

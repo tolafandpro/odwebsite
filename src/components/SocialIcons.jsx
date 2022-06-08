@@ -18,7 +18,7 @@ z-index:3;
 
 @media (max-width: 50em) {
     left: 1rem;
-    color: ${props => props.theme.text };
+    color: background-color: ${props => props.color === 'dark' ? DarkTheme.body : DarkTheme.text  };
 }
 
 &>*:not(:last-child){

@@ -22,8 +22,8 @@ padding: 2rem;
 const CONTACT = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
+top: 52%;
+right: calc(0.5rem + 0.5vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index:1;
@@ -162,14 +162,14 @@ const Main = () => {
         >
             <DarkDiv click={click}/>
             <Container>
-            <LogoComponent theme={click ? 'dark' :'light'}/>
+            <LogoComponent onClick={()=> handleClick} theme={click ? 'dark' :'light'}/>
                 <SocialIcons onClick={()=> handleClick} theme={click ? 'dark' : 'light' } />
                 <Center click={click}>
                     <PowerBtn onClick={()=> handleClick()} width={click ? 40 : 150} height={click ? 60 : 150} fill='currentColor' />
                     <span>Click the button</span>
                 </Center>
 
-                <CONTACT to="/contact">
+                { click ? <CONTACT to="/contact">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -185,9 +185,9 @@ const Main = () => {
                 >
                     Contact
                 </motion.h2>
-            </CONTACT>
-            <WORK to="/work" click={+click}
-            >
+            </CONTACT>: null }
+
+            { click ? <WORK to="/work" click={+click}>
             
                 <motion.h2
                 initial={{
@@ -202,10 +202,10 @@ const Main = () => {
                  whileTap={{scale: 0.9}}
                 >  
                     Work
-                </motion.h2>
-            </WORK>
+                </motion.h2> 
+            </WORK> : null }
             <BottomBar>
-                <ABOUT to="/about" 
+            {click ? <ABOUT to="/about" 
                 click={+click} 
 >
                     
@@ -223,8 +223,8 @@ const Main = () => {
                     >
                         About.
                     </motion.h2>
-                </ABOUT>
-                <SKILLS to="/skills">
+                </ABOUT> : null}
+                {click ? <SKILLS to="/skills">
                     <motion.h2
                     initial={{
                         y:200,
@@ -239,7 +239,7 @@ const Main = () => {
                     >
                         My Skills.
                     </motion.h2>
-                </SKILLS>
+                </SKILLS> : null }
 
             </BottomBar>
 
