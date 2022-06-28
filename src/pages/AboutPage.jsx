@@ -10,6 +10,7 @@ import BackButton from '../components/BackButton';
 // import ParticleComponent from '../components/ParticleComponent';
 import BigTitle from '../components/BigTitle'
 import oyetola from '../assets/images/tolajogging.gif'
+// import { mobile } from './../responsive';
 
 const Box = styled.div `
 background-color: ${props => props.theme.body};
@@ -41,34 +42,32 @@ const Main =  styled.div `
   border-radius: 5px;
   padding: 1rem;
   width: 50vw;
-  height: 60vh;
+  height: 50vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: calc(0.6rem + 1vw);
- backdrop-filter: blur(4px);
-  
+  backdrop-filter: blur(4px);
   position: absolute;
-  left: calc(4rem + 5vw);
-  top: 6rem;
+  left: calc(3.8rem + 5vw);
+  top: 10rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 
-  @media (max-width: 30em) {
-    width: 50vw;
-    height: 50%;
-    backdrop-filter: none;
-    margin-top: 6rem;
-    left: 5rem;
+  @media only screen and  (max-width: 50em){
+    width: "50vw",
+    height: "50%",
+    marginTop: "6rem",
+    left: "5rem",
   }
 `
 const WORK = styled(NavLink) `
 color: ${props => props.theme.text};
 
 position: absolute;
-top: 50%;
+top: 49%;
 left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
@@ -77,8 +76,8 @@ z-index:1;
 @media only screen and  (max-width: 50em){
     color: ${props => props.theme.text};
     text-shadow: rgb(0 0 0) 0px 0px 4px;
-    left: calc(1rem + 0.5vw);
-    top: 48%;
+    left: calc(1.8rem + 1vw);
+    top: 45%;
     font-size: 0.8em;
 }
 `
@@ -95,7 +94,7 @@ justify-content: space-evenly;
 const CONTACT = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 50%;
+top: 56%;
 right: calc(1rem + 2vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
@@ -104,7 +103,7 @@ z-index:1;
 @media only screen and  (max-width: 50em){
     color: ${props => props.theme.text};
     text-shadow: rgb(0 0 0) 0px 0px 4px;
-    right: calc(1rem + 0.5vw);
+    right: calc(0rem + -1vw);
     top: 50%;
     font-size: 0.8em;
 }
@@ -114,6 +113,7 @@ const ABOUT = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index:1;
+cursor: disabled;
 `
 const SKILLS = styled(NavLink)`
 color: ${props => props.theme.text};
@@ -136,7 +136,7 @@ const AboutPage = () => {
             <img src={oyetola} alt="tolajogging" />
         </Jogging>    
         <Main>
-        I'm a fullstack software developer. I love to create interative, simple and beautiful websites with mind blowing experience.
+         I love to create interative, simple and beautiful websites with mind blowing experience.
  <br/>
 I have keen interest in learning, trying new things and developing great projects. In my spare time i love to workout and play board/video games.
 <br/>
@@ -156,7 +156,7 @@ Specal thanks goes to Travesy, Ed, Wrong Akan, Web Unlocked, Codebucks and all g
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Work
+                   My Work.
                 </motion.h2>
             </WORK>
             <CONTACT to="/contact">
@@ -172,7 +172,7 @@ Specal thanks goes to Travesy, Ed, Wrong Akan, Web Unlocked, Codebucks and all g
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                 Contact
+                 Contact Me.
                 </motion.h2>
             </CONTACT>
         <BottomBar>
@@ -189,7 +189,7 @@ Specal thanks goes to Travesy, Ed, Wrong Akan, Web Unlocked, Codebucks and all g
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    About
+                    About Me.
                 </motion.h2>
             </ABOUT>
             <SKILLS to="/skills">

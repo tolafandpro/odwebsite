@@ -118,7 +118,7 @@ const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
 position: absolute;
-top: 50%;
+top: 49%;
 left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
@@ -141,7 +141,7 @@ justify-content: space-evenly;
 const CONTACT = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 50%;
+top: 56%;
 right: calc(1rem + 1vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
@@ -184,7 +184,7 @@ const SkillsPage = () => {
                     <strong>I like it Simple and Cool</strong>
                     <ul>
                         <li>
-                        Html, Css, Js, React, Redux, Angualr.
+                        Html, Css, Js, React, Redux, Angular.
                         </li>
                         <li>
                         Wordpress, Shopify, Saas.
@@ -240,7 +240,7 @@ const SkillsPage = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Contact
+                    Contact Me.
                 </motion.h2>
             </CONTACT>
         <WORK to="/work">
@@ -256,7 +256,7 @@ const SkillsPage = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Work
+                    My Work.
                 </motion.h2>
             </WORK>
         <BottomBar>
@@ -273,7 +273,7 @@ const SkillsPage = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    About.
+                    About Me.
                 </motion.h2>
             </ABOUT>
             <SKILLS to="/skills">

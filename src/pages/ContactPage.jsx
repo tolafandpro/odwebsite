@@ -174,7 +174,7 @@ const Contact = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Work
+                    My Work.
                 </motion.h2>
             </WORK>
             <BottomBar>
@@ -192,7 +192,7 @@ const Contact = () => {
                 whileTap={{scale: 0.9}}
                 exit="exit"
                 >
-                    About.
+                   About Me.
                 </motion.h2>
             </ABOUT>
             <SKILLS to="/skills">

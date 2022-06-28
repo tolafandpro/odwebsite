@@ -22,7 +22,7 @@ padding: 2rem;
 const CONTACT = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 52%;
+top: 56%;
 right: calc(0.5rem + 0.5vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
@@ -40,7 +40,7 @@ const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
 position: absolute;
-top: 50%;
+top: 49%;
 left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
@@ -183,7 +183,7 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 exit={{ opacity: 0  }}
                 >
-                    Contact
+                    Contact Me.
                 </motion.h2>
             </CONTACT>: null }
 
@@ -201,7 +201,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                  whileTap={{scale: 0.9}}
                 >  
-                    Work
+                   My Work.
                 </motion.h2> 
             </WORK> : null }
             <BottomBar>
@@ -221,7 +221,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        About.
+                        About Me.
                     </motion.h2>
                 </ABOUT> : null}
                 {click ? <SKILLS to="/skills">
