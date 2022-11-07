@@ -163,7 +163,7 @@ const Main = () => {
             <DarkDiv click={click}/>
             <Container>
             <LogoComponent onClick={()=> handleClick} theme={click ? 'dark' :'light'}/>
-                <SocialIcons onClick={()=> handleClick} theme={click ? 'dark' : 'light' } />
+                <SocialIcons onClick={()=> handleClick} theme={click ? 'dark' : 'light' }/>
                 <Center click={click}>
                     <PowerBtn onClick={()=> handleClick()} width={click ? 40 : 150} height={click ? 60 : 150} fill='currentColor' />
                     <span>Click the button</span>
@@ -201,7 +201,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                  whileTap={{scale: 0.9}}
                 >  
-                   My Work.
+                   My Works.
                 </motion.h2> 
             </WORK> : null }
             <BottomBar>

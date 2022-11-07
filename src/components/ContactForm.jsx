@@ -1,10 +1,10 @@
-import React, {useRef} from 'react';
-import styled from 'styled-components';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css"
+import React, { useRef } from "react";
+import styled from "styled-components";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-
+// Contact form for Contact Page
 const Container = styled.div`
     width: 100%;
     .form-group{
@@ -26,7 +26,7 @@ const Container = styled.div`
         resize: vertical;
     }
     button[type="submit"]{
-        background-color: ${props => props.theme.purple};
+        background-color: ${(props) => props.theme.purple};
         font-size: 0.8rem;
         display: inline-block;
         padding: 1rem 1rem;
@@ -34,7 +34,7 @@ const Container = styled.div`
         cursor: pointer;
         width: 98%;
         &:hover{
-            background-color: ${props => props.theme.purple};
+            background-color: ${(props) => props.theme.purple};
             box-shadow: 0 0 8px 6px rgba(306,0,306,0.3);
             transform: scale(1);
         }
@@ -43,60 +43,57 @@ const Container = styled.div`
             width: 100%;
         }
     }
-`
+`;
 
 function FormInput() {
-    const form = useRef();
-   
-    const sendEmail = (e) => {
-        e.preventDefault();
+  const form = useRef();
 
-        emailjs.sendForm('service_6bu8gdz', 'template_7muqkjb', form.current, 'jPcOcCuHKZAXQyi5J')
-                    .then((result) => {
-                        console.log(result.text);
-                        toast.success("Your message has been sent successfully.")
-                    }, (error) => {
-                        console.log(error.text);
-                        toast.error("Error message was not sent.")
-                    });
-                    e.target.reset()
-                    // showResult(true)
-        };
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    return ( 
-        <div> 
-            <ToastContainer/>
-            <Container> 
-               <form className="container" ref={form} onSubmit={sendEmail}>
-                <div className='form-group'>
-                    <label htmlFor="name">Your Name</label>
-                    <input 
-                        id="name"
-                        name="name"
-                        type='text' 
-                        required />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor="email">Your Email</label>
-                    <input 
-                        id="email"
-                        name="email"
-                        type='text' 
-                        required />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor="message">Write a Message</label>
-                    <textarea 
-                        id="message"
-                        name="message"
-                        type="textarea" 
-                        required />
-                </div>
-                <button type="submit">Send</button>
-              </form>
-            </Container>
-        </div>
+    emailjs
+      .sendForm(
+        "service_6bu8gdz",
+        "template_7muqkjb",
+        form.current,
+        "jPcOcCuHKZAXQyi5J"
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          toast.success("Your message has been sent successfully.");
+        },
+        (error) => {
+          // console.log(error.text);
+          toast.error("Error message was not sent.");
+        }
       );
-};
- 
+    e.target.reset();
+    // showResult(true)
+  };
+
+  return (
+    <div>
+      <ToastContainer />
+      <Container>
+        <form className="container" ref={form} onSubmit={sendEmail}>
+          <div className="form-group">
+            <label htmlFor="name">Your Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Your Email</label>
+            <input id="email" name="email" type="text" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Write a Message</label>
+            <textarea id="message" name="message" type="textarea" required />
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </Container>
+    </div>
+  );
+}
+
 export default FormInput;

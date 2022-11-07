@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Me from '../assets/images/Odavid-maker.gif';
 
 
@@ -65,9 +65,9 @@ background: linear-gradient(to right, ${props => props.theme.body} 50%,${props =
     
 `
 const SubBox = styled.div`
-width: 50%;
-position: relative;
-display: flex;
+    width: 50%;
+    position: relative;
+    display: flex;
 
 @media only screen and (max-width: 50em) {
     width: 100%;
@@ -76,7 +76,7 @@ display: flex;
 .pic{
     position: absolute;
     bottom: 0.2rem;
-    left: 66%;
+    left: 70%;
     transform: translate(-50%,0%);
     width: 17em;
     height: 98%;
@@ -112,7 +112,7 @@ flex-direction: column;
 justify-content: space-evenly;
 
 &>*:last-child{
-    color: ${props => `rgba(${props.theme.bodyRgba},0.6)` };
+    color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};
     font-size: calc(0.4rem + 1.6vw);
     font-weight:300;
 
@@ -123,11 +123,11 @@ justify-content: space-evenly;
 `
 
 const Intro = () => {
-    return ( 
+    return (
         <Box
-        initial={{height:0}}
-        animate={{height: '65vh'}}
-        transition={{ type: 'spring', duration:2, delay:1 }}
+            initial={{ height: 0 }}
+            animate={{ height: '65vh' }}
+            transition={{ type: 'spring', duration: 2, delay: 1 }}
         >
             <SubBox>
                 <Text>
@@ -138,15 +138,15 @@ const Intro = () => {
             </SubBox>
             <SubBox>
                 <motion.div
-                initial={{opacity:0}}
-        animate={{opacity: 1}}
-        transition={{ duration:1, delay:3 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 3 }}
                 >
                     <img className="pic" src={Me} alt="David Pic" />
                 </motion.div>
             </SubBox>
         </Box>
-     );
+    );
 }
- 
+
 export default Intro;

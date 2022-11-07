@@ -1,3 +1,6 @@
+// All SVG created as a function with SVGR 
+
+
 export const PowerBtn = (props) => {
     return (
       <svg
@@ -17,6 +20,7 @@ export const PowerBtn = (props) => {
     )
   }
   
+  //Back Button SVG at the top left conner
   export const BackBtn = (props) => {
       return(
         <svg
@@ -38,6 +42,7 @@ export const PowerBtn = (props) => {
       )
   }
   
+  //Github SVG for social media handle at the bottom left conner
   export const Github = (props) => {
       return (
           <svg
@@ -57,6 +62,7 @@ export const PowerBtn = (props) => {
         )
   }
   
+  //Twitter SVG for social media handle at the bottom left conner
   export const Twitter = (props) => {
       return (
           <svg
@@ -76,6 +82,7 @@ export const PowerBtn = (props) => {
         )
   }
   
+  //Facebook SVG for social media handle at the bottom left conner
   export const Facebook = (props) => {
       return (
           <svg
@@ -95,6 +102,7 @@ export const PowerBtn = (props) => {
         )
   }
   
+  //Linkedin SVG for social media handle at the bottom left conner
   export const Linkedin = (props) => {
     return (
       <svg
@@ -231,6 +239,7 @@ export const PowerBtn = (props) => {
   
   }
   
+  //Database SVG on skills page
   export const Database = (props) => { 
     return (
       <svg
@@ -250,6 +259,8 @@ export const PowerBtn = (props) => {
     )
   
   }
+
+  
   export const Carwheel = (props) => { 
     return (
       <svg
