@@ -6,43 +6,44 @@ import "react-toastify/dist/ReactToastify.css";
 
 // Contact form for Contact Page
 const Container = styled.div`
+  width: 100%;
+  .form-group {
     width: 100%;
-    .form-group{
-        width: 100%
-        margin-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+  input,
+  textarea {
+    width: 90%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+  textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  button[type="submit"] {
+    background-color: ${(props) => props.theme.purple};
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 98%;
+    &:hover {
+      background-color: ${(props) => props.theme.purple};
+      box-shadow: 0 0 8px 6px rgba(306, 0, 306, 0.3);
+      transform: scale(1);
     }
-    label {
-        font-size: 1rem;
-    }   
-    input, textarea{
-        width: 90%;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: 0.8rem;
-        border-radius: 8px;
-    }
-    textarea {
-        min-height: 80px;
-        resize: vertical;
-    }
-    button[type="submit"]{
-        background-color: ${(props) => props.theme.purple};
-        font-size: 0.8rem;
-        display: inline-block;
-        padding: 1rem 1rem;
-        border-radius: 8px;
-        cursor: pointer;
-        width: 98%;
-        &:hover{
-            background-color: ${(props) => props.theme.purple};
-            box-shadow: 0 0 8px 6px rgba(306,0,306,0.3);
-            transform: scale(1);
-        }
 
-        @media (max-width: 50em) {
-            width: 100%;
-        }
+    @media (max-width: 50em) {
+      width: 100%;
     }
+  }
 `;
 
 function FormInput() {
@@ -68,7 +69,7 @@ function FormInput() {
           toast.error("Error message was not sent.");
         }
       );
-    e.target.reset();
+
     // showResult(true)
   };
 

@@ -53,14 +53,14 @@ const Main = styled.div`
   position: absolute;
   left: calc(3.8rem + 5vw);
   top: 10rem;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: "Ubuntu Mono", monospace;
   font-style: italic;
 
-  @media only screen and  (max-width: 50em){
-    width: "50vw",
-    height: "50%",
-    marginTop: "6rem",
-    left: "5rem",
+  @media only screen and (max-width: 50em) {
+    width: "50vw";
+    height: "50%";
+    margin-top: "6rem";
+    left: "5rem";
   }
 `;
 const WORK = styled(NavLink)`

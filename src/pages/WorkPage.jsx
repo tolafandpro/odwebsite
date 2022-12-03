@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { DarkTheme } from "./Themes";
+import { lightTheme, DarkTheme } from "./Themes";
 import { motion } from "framer-motion";
 
 import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import BackButton from "../components/BackButton";
+import scrollhand from "../assets/images/hand-scroll.gif";
 
 import { Work } from "../data/WorkData";
 import Card from "../components/Card";
@@ -22,33 +23,29 @@ const Box = styled.div`
 `;
 
 const Main = styled(motion.ul)`
-position: fixed;
-top: 12rem;
-left:calc(10rem + 15vw);
-height: 40vh;
-display: flex;
+  position: fixed;
+  top: 12rem;
+  left: calc(5rem + 15vw);
+  height: 40vh;
+  display: flex;
+  color: white;
 
-color:white;
+  @media only screen and (max-width: 25em) {
+    left: calc(1rem + 2vw);
+  }
+  @media only screen and (max-width: 40em) {
+    top: 30%;
+  }
 
-@media only screen and (max-width: 25em) {
-     {
-        left: calc(1rem + 15vw);
+  @media only screen and (max-width: 25em) {
+    .card {
+      left: calc(1rem + 15vw);
+      width: 12rem;
+      margin-right: 4rem;
+      height: 35vh;
+      padding: 1.5rem;
     }
-@media only screen and (max-width: 40em) {
-    {
-        top: 30%;
-    }
-
-    @media only screen and (max-width: 25em) {
-        .card{
-           left: calc(1rem + 15vw);
-           width: 12rem;
-           margin-right: 4rem;
-           height: 35vh;
-           padding: 1.5rem;
-       }
-}
-
+  }
 `;
 const Rotate = styled.span`
   display: block;
@@ -102,6 +99,7 @@ const container = {
 const WorkPage = () => {
   const ref = useRef(null);
   const ShipWheel = useRef(null);
+  const [scrollhandImage, setScrollhandImage] = useState(false);
 
   useEffect(() => {
     let element = ref.current;
@@ -119,13 +117,35 @@ const WorkPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setInterval(() => {
+      if (scrollhandImage === false) {
+        setScrollhandImage(!scrollhandImage);
+      }
+    }, 2000);
+    return () => clearInterval(setScrollhandImage);
+  });
+
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <Box>
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <BackButton />
         <Main ref={ref} variants={container} initial="hidden" animate="show">
+          {scrollhandImage && (
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 4,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              src={scrollhand}
+              alt="scroll"
+            />
+          )}
           {Work.map((d) => (
             <Card className="card" key={d.id} data={d} />
           ))}
