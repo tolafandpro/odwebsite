@@ -135,15 +135,15 @@ const AboutPage = () => {
           <img src={oyetola} alt="tolajogging" />
         </Jogging>
         <Main>
-          I love to create interative, simple and beautiful websites with mind
-          blowing experience.
+          I love to create interative, simple and building and deploying
+          full-stack web applications with mind blowing experience.
           <br />
-          I have keen interest in learning, trying new things and developing
-          great projects. In my spare time i love to workout and play
-          board/video games.
+          Oyetola David is skilled web developer with 5 years of experience
+          proficient in MongoDB, Express.js, React.js, Wordpress and Node.js.
           <br />
-          Specal thanks goes to Travesy, Ed, Wrong Akan, Web Unlocked, Codebucks
-          and all great youtubers out there. Stay safe and have a wonderful day.
+          In addition to my professional skills, I'm also passionate about
+          staying active and healthy through exercise and enjoys playing video
+          games in my free time.. Stay safe and have a wonderful day.
         </Main>
         <BigTitle text="ABOUT" top="10%" left="5%" />
         <WORK to="/work">
@@ -159,7 +159,7 @@ const AboutPage = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            My Work.
+            My Works.
           </motion.h2>
         </WORK>
         <CONTACT to="/contact">

@@ -31,7 +31,7 @@ const Main = styled(motion.ul)`
   color: white;
 
   @media only screen and (max-width: 25em) {
-    left: calc(1rem + 2vw);
+    left: calc(1rem + 0.5vw);
   }
   @media only screen and (max-width: 40em) {
     top: 30%;
@@ -39,7 +39,7 @@ const Main = styled(motion.ul)`
 
   @media only screen and (max-width: 25em) {
     .card {
-      left: calc(1rem + 15vw);
+      left: calc(1rem + 5vw);
       width: 12rem;
       margin-right: 4rem;
       height: 35vh;

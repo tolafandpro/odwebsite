@@ -13,12 +13,12 @@ export const Work = [
     },
     {
         id:2,
-        name:"Budget Calculator App",
-        description:"A free simple budget calculator to track how bills are spent. Built from scratch.",
-        tags:["Angular","Bulma"],
+        name:"CryptoDave(React + Tailwind CSS)",
+        description:"A Crypto WebApp: A basic Crypto Screener App with Tailwind CSS.",
+        tags:["React","Tailwind CSS","Rechart","Coingecko"],
         
-        demo:"https://github.com/tolafandpro/Budget-Calculator-App",
-        github:"https://github.com/tolafandpro/Budget-Calculator-App"
+        demo:"#",
+        github:"https://github.com/tolafandpro/cryptodave-app"
         
     },
     {
@@ -33,6 +33,17 @@ export const Work = [
     },
     {
         id:4,
+        name:"Budget Calculator App",
+        description:"A free simple budget calculator to track how bills are spent. Built from scratch.",
+        tags:["Angular","Bulma"],
+        
+        demo:"https://github.com/tolafandpro/Budget-Calculator-App",
+        github:"https://github.com/tolafandpro/Budget-Calculator-App"
+        
+    },
+    
+    {
+        id:5,
         name:"Kapek",
         description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
         tags:["Shopify","Wordpress","CMS"],
@@ -41,7 +52,7 @@ export const Work = [
         github:"https://github.com/tolafandpro"
     },
     {
-        id:5,
+        id:6,
         name:"Oyetola Movie App",
         description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
         tags:["react","sass"],
@@ -50,16 +61,7 @@ export const Work = [
         github:"https://github.com/tolafandpro"
         
     },
-    {
-        id:6,
-        name:"Todo App(Angular + Material Ui)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["Angular","Bulma","framer-motion"],
-        
-        demo:"#",
-        github:"https://github.com/tolafandpro"
-        
-    },
+    
     {
         id:7,
         name:"Botosoft Technologies",
