@@ -17,7 +17,7 @@ export const Work = [
         description:"A Crypto WebApp: A basic Crypto Screener App with Tailwind CSS.",
         tags:["React","Tailwind CSS","Rechart","Coingecko"],
         
-        demo:"#",
+        demo:"https://cryptodave-app.vercel.app/",
         github:"https://github.com/tolafandpro/cryptodave-app"
         
     },
